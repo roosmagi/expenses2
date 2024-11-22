@@ -7,24 +7,31 @@ const ExpenseForm = (props)  => {
         enteredPrice: '',
         enteredDate: ''
     }) 
-    
-    const [enteredTitle, setEnteredTitle] = useState('')
-    const [enteredPrice, setEnteredPrice] = useState('')
-    const [enteredDate, setEnteredDate]   = useState('')
+
+    console.log(userInput)
     
     const titleChangeHandler = (event) => {
-        setEnteredTitle(event.target.value)
+        setuserInput({
+            ...userInput,
+            enteredTitle: event.target.value
+    })
     } 
     const priceChangeHandler = (event) => {
-        setEnteredPrice(event.target.value)
+        setuserInput({
+            ...userInput,
+            enteredPrice: event.target.value
+        })
     }   
     const dateChangeHandler = (event) => {
-        setEnteredDate(event.target.value)
+        setuserInput({
+            ...userInput,
+            enteredDate: event.target.value
+        })
     } 
     
     return (
         <form>
-            <div className='new-expense__controls'>
+            <div className='new-expense__nt.target.value)controls'>
                 <div className='new-expense__control'>
                     <label>Title</label>
                     <input type='text' onChange={titleChangeHandler}/>
